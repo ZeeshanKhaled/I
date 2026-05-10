@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commands | Minecraft Info Vault</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Minecraft Info Vault</div>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="commands.html" class="active">Commands</a>
+      <a href="coordinates.html">Coordinates</a>
+      <a href="files.html">Files</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="notes.html">Notes</a>
+    </nav>
+  </header>
+
+ <main class="container">
+  <section class="page-heading command-hero">
+    <p class="eyebrow">Command Library</p>
+    <h1>Copy Minecraft commands instantly.</h1>
+    <p>
+      Search, filter, and copy the commands you use most without digging through random notes.
+    </p>
+  </section>
+
+  <section class="toolbar command-toolbar">
+    <input 
+      type="text" 
+      id="commandSearch" 
+      class="search-input" 
+      placeholder="Search commands by name, category, or text..." 
+    />
+
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="basic">Basic</button>
+      <button class="filter-btn" data-filter="gamerule">Gamerules</button>
+      <button class="filter-btn" data-filter="teleport">Teleport</button>
+      <button class="filter-btn" data-filter="world">World</button>
+      <button class="filter-btn" data-filter="effect">Effects</button>
+      <button class="filter-btn" data-filter="items">Items</button>
+      <button class="filter-btn" data-filter="special">Special</button>
+    </div>
+  </section>
+
+  <section class="banner-generator panel">
+    <div class="banner-generator-header">
+      <div>
+        <p class="eyebrow">Banner Generator</p>
+        <h2>Number Banner Commands</h2>
+        <p>Pick a number and colour combo, then copy the generated banner command.</p>
+      </div>
+    </div>
+
+    <div class="banner-controls">
+      <label>
+        Number
+        <select id="bannerNumber">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="0">0</option>
+        </select>
+      </label>
+
+      <label>
+        Banner Colour
+        <select id="bannerBaseColour">
+          <option value="white">White</option>
+          <option value="orange">Orange</option>
+          <option value="magenta">Magenta</option>
+          <option value="light_blue">Light Blue</option>
+          <option value="yellow">Yellow</option>
+          <option value="lime">Lime</option>
+          <option value="pink">Pink</option>
+          <option value="gray">Gray</option>
+          <option value="light_gray">Light Gray</option>
+          <option value="cyan">Cyan</option>
+          <option value="purple">Purple</option>
+          <option value="blue">Blue</option>
+          <option value="brown">Brown</option>
+          <option value="green">Green</option>
+          <option value="red">Red</option>
+          <option value="black">Black</option>
+        </select>
+      </label>
+
+      <label>
+        Number Colour
+        <select id="bannerNumberColour">
+          <option value="black">Black</option>
+          <option value="white">White</option>
+          <option value="orange">Orange</option>
+          <option value="magenta">Magenta</option>
+          <option value="light_blue">Light Blue</option>
+          <option value="yellow">Yellow</option>
+          <option value="lime">Lime</option>
+          <option value="pink">Pink</option>
+          <option value="gray">Gray</option>
+          <option value="light_gray">Light Gray</option>
+          <option value="cyan">Cyan</option>
+          <option value="purple">Purple</option>
+          <option value="blue">Blue</option>
+          <option value="brown">Brown</option>
+          <option value="green">Green</option>
+          <option value="red">Red</option>
+          <option value="black">Black</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="generated-command-box">
+      <code id="generatedBannerCommand"></code>
+      <button class="copy-btn" id="copyGeneratedBanner">Copy</button>
+    </div>
+  </section>
+
+
+
+
+  <section class="banner-generator panel letter-banner-generator">
+    <div class="banner-generator-header">
+      <div>
+        <p class="eyebrow">Letter Banner Generator</p>
+        <h2>Letter Banner Commands</h2>
+        <p>Pick a letter and colour combo, then copy the generated banner command.</p>
+      </div>
+    </div>
+
+    <div class="banner-controls">
+      <label>
+        Letter
+        <select id="letterBannerLetter">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+          <option value="E">E</option>
+          <option value="F">F</option>
+          <option value="G">G</option>
+          <option value="H">H</option>
+          <option value="I">I</option>
+          <option value="J">J</option>
+          <option value="K">K</option>
+          <option value="L">L</option>
+          <option value="M">M</option>
+          <option value="N">N</option>
+          <option value="O">O</option>
+          <option value="P">P</option>
+          <option value="Q">Q</option>
+          <option value="R">R</option>
+          <option value="S">S</option>
+          <option value="T">T</option>
+          <option value="U">U</option>
+          <option value="V">V</option>
+          <option value="W">W</option>
+          <option value="X">X</option>
+          <option value="Y">Y</option>
+          <option value="Z">Z</option>
+        </select>
+      </label>
+
+      <label>
+        Banner Colour
+        <select id="letterBannerBaseColour">
+          <option value="black">Black</option>
+          <option value="white">White</option>
+          <option value="orange">Orange</option>
+          <option value="magenta">Magenta</option>
+          <option value="light_blue">Light Blue</option>
+          <option value="yellow">Yellow</option>
+          <option value="lime">Lime</option>
+          <option value="pink">Pink</option>
+          <option value="gray">Gray</option>
+          <option value="light_gray">Light Gray</option>
+          <option value="cyan">Cyan</option>
+          <option value="purple">Purple</option>
+          <option value="blue">Blue</option>
+          <option value="brown">Brown</option>
+          <option value="green">Green</option>
+          <option value="red">Red</option>
+        </select>
+      </label>
+
+      <label>
+        Letter Colour
+        <select id="letterBannerLetterColour">
+          <option value="white">White</option>
+          <option value="black">Black</option>
+          <option value="orange">Orange</option>
+          <option value="magenta">Magenta</option>
+          <option value="light_blue">Light Blue</option>
+          <option value="yellow">Yellow</option>
+          <option value="lime">Lime</option>
+          <option value="pink">Pink</option>
+          <option value="gray">Gray</option>
+          <option value="light_gray">Light Gray</option>
+          <option value="cyan">Cyan</option>
+          <option value="purple">Purple</option>
+          <option value="blue">Blue</option>
+          <option value="brown">Brown</option>
+          <option value="green">Green</option>
+          <option value="red">Red</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="generated-command-box">
+      <code id="generatedLetterBannerCommand"></code>
+      <button class="copy-btn" id="copyGeneratedLetterBanner">Copy</button>
+    </div>
+  </section>
+
+  <section class="player-head-generator panel">
+    <div class="banner-generator-header">
+      <div>
+        <p class="eyebrow">Player Head Generator</p>
+        <h2>Custom Player Head Command</h2>
+        <p>Type a Minecraft username and copy the generated player head command.</p>
+      </div>
+    </div>
+
+    <div class="player-head-controls">
+      <label>
+        Player Name
+        <input
+          type="text"
+          id="playerHeadName"
+          value="Ninja_Zeesh"
+          placeholder="Enter player name..."
+          autocomplete="off"
+        />
+      </label>
+    </div>
+
+    <div class="generated-command-box">
+      <code id="generatedPlayerHeadCommand"></code>
+      <button class="copy-btn" id="copyGeneratedPlayerHead">Copy</button>
+    </div>
+  </section>
+
+  <section class="command-grid">
+    <article class="command-card" data-category="gamerule">
+      <div class="command-main">
+        <div class="command-topline">
+          <span class="tag">Gamerule</span>
+          <span class="command-note">Survival / Creative</span>
+        </div>
+
+        <h2>Keep Inventory</h2>
+
+        <div class="command-code-row">
+          <code>/gamerule keepInventory true</code>
+          <button class="copy-btn" data-copy="/gamerule keepInventory true">Copy</button>
+        </div>
+
+        <p>Stops players from losing their items after death.</p>
+      </div>
+    </article>
+
+    <article class="command-card" data-category="gamerule">
+      <div class="command-main">
+        <div class="command-topline">
+          <span class="tag">Gamerule</span>
+          <span class="command-note">World Settings</span>
+        </div>
+
+        <h2>Disable Mob Griefing</h2>
+
+        <div class="command-code-row">
+          <code>/gamerule mobGriefing false</code>
+          <button class="copy-btn" data-copy="/gamerule mobGriefing false">Copy</button>
+        </div>
+
+        <p>Stops creepers, endermen, ghasts, and other mobs from damaging blocks.</p>
+      </div>
+    </article>
+
+    <article class="command-card" data-category="basic">
+      <div class="command-main">
+        <div class="command-topline">
+          <span class="tag">Basic</span>
+          <span class="command-note">Time</span>
+        </div>
+
+        <h2>Set Time to Day</h2>
+
+        <div class="command-code-row">
+          <code>/time set day</code>
+          <button class="copy-btn" data-copy="/time set day">Copy</button>
+        </div>
+
+        <p>Changes the world time to daytime.</p>
+      </div>
+    </article>
+
+    <article class="command-card" data-category="basic">
+      <div class="command-main">
+        <div class="command-topline">
+          <span class="tag">Basic</span>
+          <span class="command-note">Time</span>
+        </div>
+
+        <h2>Set Time to Night</h2>
+
+        <div class="command-code-row">
+          <code>/time set night</code>
+          <button class="copy-btn" data-copy="/time set night">Copy</button>
+        </div>
+
+        <p>Changes the world time to night.</p>
+      </div>
+    </article>
+
+    <article class="command-card" data-category="world">
+      <div class="command-main">
+        <div class="command-topline">
+          <span class="tag">World</span>
+          <span class="command-note">Weather</span>
+        </div>
+
+        <h2>Clear Weather</h2>
+
+        <div class="command-code-row">
+          <code>/weather clear</code>
+          <button class="copy-btn" data-copy="/weather clear">Copy</button>
+        </div>
+
+        <p>Clears rain and thunderstorms.</p>
+      </div>
+    </article>
+
+    <article class="command-card" data-category="teleport">
+      <div class="command-main">
+        <div class="command-topline">
+          <span class="tag">Teleport</span>
+          <span class="command-note">Coordinates</span>
+        </div>
+
+        <h2>Teleport to Coordinates</h2>
+
+        <div class="command-code-row">
+          <code>/tp @p 0 80 0</code>
+          <button class="copy-btn" data-copy="/tp @p 0 80 0">Copy</button>
+        </div>
+
+        <p>Teleports the nearest player to a specific set of coordinates.</p>
+      </div>
+    </article>
+
+    <article class="command-card" data-category="effect">
+      <div class="command-main">
+        <div class="command-topline">
+          <span class="tag">Effect</span>
+          <span class="command-note">Vision</span>
+        </div>
+
+        <h2>Night Vision</h2>
+
+        <div class="command-code-row">
+          <code>/effect give @p minecraft:night_vision 999999 1 true</code>
+          <button class="copy-btn" data-copy="/effect give @p minecraft:night_vision 999999 1 true">Copy</button>
+        </div>
+
+        <p>Gives the nearest player long-lasting night vision without particles.</p>
+      </div>
+    </article>
+
+    <article class="command-card" data-category="effect">
+      <div class="command-main">
+        <div class="command-topline">
+          <span class="tag">Effect</span>
+          <span class="command-note">Reset</span>
+        </div>
+
+        <h2>Clear Effects</h2>
+
+        <div class="command-code-row">
+          <code>/effect clear @p</code>
+          <button class="copy-btn" data-copy="/effect clear @p">Copy</button>
+        </div>
+
+        <p>Removes all active potion effects from the nearest player.</p>
+      </div>
+    </article>
+
+    <article class="command-card" data-category="items">
+      <div class="command-main">
+        <div class="command-topline">
+          <span class="tag">Items</span>
+          <span class="command-note">Give</span>
+        </div>
+
+        <h2>Give Command Block</h2>
+
+        <div class="command-code-row">
+          <code>/give @p minecraft:command_block</code>
+          <button class="copy-btn" data-copy="/give @p minecraft:command_block">Copy</button>
+        </div>
+
+        <p>Gives the nearest player a command block.</p>
+      </div>
+    </article>
+
+    <article class="command-card" data-category="special">
+      <div class="command-main">
+        <div class="command-topline">
+          <span class="tag">Special</span>
+          <span class="command-note">Tools</span>
+        </div>
+
+        <h2>Debug Stick</h2>
+
+        <div class="command-code-row">
+          <code>/give @p minecraft:debug_stick</code>
+          <button class="copy-btn" data-copy="/give @p minecraft:debug_stick">Copy</button>
+        </div>
+
+        <p>Gives a debug stick for changing block states in creative mode.</p>
+      </div>
+    </article>
+
+    <article class="command-card" data-category="special">
+      <div class="command-main">
+        <div class="command-topline">
+          <span class="tag">Special</span>
+          <span class="command-note">Hidden Blocks</span>
+        </div>
+
+        <h2>Barrier Block</h2>
+
+        <div class="command-code-row">
+          <code>/give @p minecraft:barrier</code>
+          <button class="copy-btn" data-copy="/give @p minecraft:barrier">Copy</button>
+        </div>
+
+        <p>Gives an invisible barrier block for blocking areas without visible blocks.</p>
+      </div>
+    </article>
+
+    <article class="command-card" data-category="special">
+      <div class="command-main">
+        <div class="command-topline">
+          <span class="tag">Special</span>
+          <span class="command-note">Lighting</span>
+        </div>
+
+        <h2>Light Block</h2>
+
+        <div class="command-code-row">
+          <code>/give @p minecraft:light</code>
+          <button class="copy-btn" data-copy="/give @p minecraft:light">Copy</button>
+        </div>
+
+        <p>Gives a light block for invisible custom lighting.</p>
+      </div>
+    </article>
+
+    <article class="command-card" data-category="special">
+      <div class="command-main">
+        <div class="command-topline">
+          <span class="tag">Special</span>
+          <span class="command-note">Decoration</span>
+        </div>
+
+        <h2>Invisible Item Frame</h2>
+
+        <div class="command-code-row">
+          <code>/give @p item_frame[entity_data={id:"minecraft:item_frame",Invisible:1b}]</code>
+          <button class="copy-btn" data-copy='/give @p item_frame[entity_data={id:"minecraft:item_frame",Invisible:1b}]'>Copy</button>
+        </div>
+
+        <p>Gives an item frame that becomes invisible when placed.</p>
+      </div>
+    </article>
+  </section>
+</main>
+
+  <div class="toast" id="toast">Copied!</div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

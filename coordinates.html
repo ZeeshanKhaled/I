@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coordinates | Minecraft Info Vault</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Minecraft Info Vault</div>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="commands.html">Commands</a>
+      <a href="coordinates.html" class="active">Coordinates</a>
+      <a href="files.html">Files</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="notes.html">Notes</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-heading">
+      <p class="eyebrow">World Locations</p>
+      <h1>Important coordinates.</h1>
+      <p>Save locations and copy teleport commands fast.</p>
+    </section>
+
+    <section class="command-grid">
+      <article class="command-card">
+        <div>
+          <span class="tag">City</span>
+          <h2>Spawn</h2>
+          <code>/tp @p 0 80 0</code>
+          <p>Main spawn point for the world.</p>
+        </div>
+        <button class="copy-btn" data-copy="/tp @p 0 80 0">Copy TP</button>
+      </article>
+
+      <article class="command-card">
+        <div>
+          <span class="tag">Landmark</span>
+          <h2>Thor Hammer Tower</h2>
+          <code>/tp @p 120 90 -230</code>
+          <p>Main skyline landmark.</p>
+        </div>
+        <button class="copy-btn" data-copy="/tp @p 120 90 -230">Copy TP</button>
+      </article>
+
+      <article class="command-card">
+        <div>
+          <span class="tag">Road</span>
+          <h2>Milkstone Lane</h2>
+          <code>/tp @p -40 70 180</code>
+          <p>Road named after the cow of eternal life.</p>
+        </div>
+        <button class="copy-btn" data-copy="/tp @p -40 70 180">Copy TP</button>
+      </article>
+    </section>
+  </main>
+
+  <div class="toast" id="toast">Copied!</div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

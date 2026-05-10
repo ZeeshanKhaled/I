@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minecraft Info Vault</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Minecraft Info Vault</div>
+
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="commands.html">Commands</a>
+      <a href="coordinates.html">Coordinates</a>
+      <a href="files.html">Files</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="notes.html">Notes</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">Personal Minecraft Control Room</p>
+      <h1>Your command, file, build, and world archive.</h1>
+      <p>
+        Store useful commands, important coordinates, world backups, build screenshots,
+        and random notes all in one clean Minecraft-style dashboard.
+      </p>
+    </section>
+
+    <section class="dashboard-grid">
+      <a href="commands.html" class="dashboard-card">
+        <span class="card-icon">⌘</span>
+        <h2>Commands</h2>
+        <p>Copy useful commands instantly.</p>
+      </a>
+
+      <a href="coordinates.html" class="dashboard-card">
+        <span class="card-icon">📍</span>
+        <h2>Coordinates</h2>
+        <p>Save important places in your world.</p>
+      </a>
+
+      <a href="files.html" class="dashboard-card">
+        <span class="card-icon">📁</span>
+        <h2>Files</h2>
+        <p>Link world backups, datapacks, and schematics.</p>
+      </a>
+
+      <a href="gallery.html" class="dashboard-card">
+        <span class="card-icon">🖼️</span>
+        <h2>Gallery</h2>
+        <p>Keep screenshots and build references.</p>
+      </a>
+
+      <a href="notes.html" class="dashboard-card">
+        <span class="card-icon">📝</span>
+        <h2>Notes</h2>
+        <p>Store ideas, plans, lore, and reminders.</p>
+      </a>
+    </section>
+
+    <section class="panel">
+      <h2>Quick Tools</h2>
+
+      <div class="quick-list">
+        <a href="commands.html" class="mini-command quick-tool-link">
+          <div>
+            <strong>Number Banner Generator</strong>
+            <p>Create copyable numbered banner commands with custom colours.</p>
+          </div>
+          <span class="quick-arrow">Open</span>
+        </a>
+
+        <a href="commands.html" class="mini-command quick-tool-link">
+          <div>
+            <strong>Player Head Generator</strong>
+            <p>Type a player name and generate the custom player head command.</p>
+          </div>
+          <span class="quick-arrow">Open</span>
+        </a>
+
+        <div class="mini-command">
+          <div>
+            <strong>Invisible Item Frame</strong>
+            <code>/give @p item_frame[entity_data={id:"minecraft:item_frame",Invisible:1b}]</code>
+          </div>
+          <button
+            class="copy-btn"
+            data-copy='/give @p item_frame[entity_data={id:"minecraft:item_frame",Invisible:1b}]'
+          >
+            Copy
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast">Copied!</div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
